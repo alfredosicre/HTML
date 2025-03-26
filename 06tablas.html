@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Clientes</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;/* usa arial, sino hay usa helvetica y sino hay pon la que tengas sin serif */
+        }
+        #tablaClientes{
+            color: rgb(55, 0, 255);
+            background-color: grey;
+            border-radius: 10px;
+            border: black;
+            box-shadow: 20px 20px 30px grey;  
+        }
+        #tablaClientes caption{
+            background-color: rgb(11, 1, 1);
+            font-weight: bold;
+            color: white;
+            font-size: 50px;
+        }
+        #tablaClientes thead th, #tablaClientes tfoot{ /* definimos la cabecera y el pie de la tabla*/
+            color: white;
+            font-weight: bold;
+            background-color: black;
+            text-align: right;
+            font-size: 30px;
+        }
+        td, th{
+            padding: 5px 100px;
+        }
+        #tablaClientes td:nth-child(2), #tablaClientes thead th:nth-child(2){ /* me selecciona la segunsa columna*/
+            text-align:right;
+        }
+        #tablaClientes tbody tr:nth-child(odd){ /* las filas impares, para pares es con even */
+            background-color: rgb(185, 181, 181);
+        }
+        #tablaClientes tbody tr:hover{ /* por donde paso el raton, me lo va señalando */
+            background-color: beige;
+            color: black;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <table id="tablaClientes">
+        <caption> <!--titulo de la tabla-->
+            Tabla de clientes.
+        </caption>
+        <thead> <!--cabecera de la tabla-->
+            <tr>
+                <th>Codigo de Cliente</th><th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody> <!--cuerpo de la tabla, lineas de datos-->
+            <!-- una maera de definir rapido un cuerpo es poniendo por ejemplo tr#fila$*2>td*2-->
+            <tr id="Fila 1"><td>128</td><td>Pepe</td></tr>
+            <tr id="Fila 2"><td>300</td><td>Manolo</td></tr>
+            <tr id="Fila 3"><td>321</td><td>Francisco</td></tr>
+            <tr id="Fila 4"><td>456</td><td>Paco</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="2">Cantidad de clientes -> 4</td></tr>
+        </tfoot>
+    </table>
+</body>
+</html>

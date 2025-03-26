@@ -21,16 +21,19 @@
             margin: 30px auto;
         }
     </style>
-    <script>
-        // codigo javascript
+    <script> // codigo javascript
+        let secun; // la defino fuera para poder utilizarla
         function inicio(){
-            let secun = document.getElementById('subtitulosecundario'); //llama al elemento h5 subtitulosecundario
+            secun = document.getElementById('subtitulosecundario'); //llama al elemento h5 subtitulosecundario
             secun.onclick = click_secun; // si hacen click se ejecuta la funcion click_secun
         }
+        
         function click_secun(){
             alert('¡¡ Haz hecho click !!');
+            secun.innerText = " Nuevo mensaje en h5";
         }
-        window.onload = inicio;
+        
+        window.onload = inicio; // se carga la funcion inicio cuando se procesa todo el programa y se carga el arbol DOM
     </script>
 </head>
 <body>

@@ -11,25 +11,37 @@
             border: 2px solid;
             padding: 55px;
             margin: 10px;
+            /* position: absolute;*/
         }
         #contPrincipal div{
             border: 0.5px solid;
             padding: 20px;
+            opacity: 0.8;
         }
         /* ponemos cada caja de un color */
         #caja1{
             background-color: rgb(120, 120, 199);
+            float: left;
         }
         #caja2{
             background-color: rgb(199, 120, 120);
+            float: left;
+            z-index: 20;
         }
         #caja3{
             background-color: rgb(120, 199, 133);
+            float: left;
         }
         #caja4{
             background-color: rgb(155, 155, 163);
+            float: left;
         }
     </style>
+    <script>
+        window.onload = function(){ // es una funcion anonima, solo se procesa una vez.
+
+        };
+    </script>
 </head>
 <body>
     <div id="contPrincipal"> <!-- lo mismo que si escribimos esto div#contPrincipal>div#caja$*4>p>{Caja$} y damos intro-->

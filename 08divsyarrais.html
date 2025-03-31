@@ -11,51 +11,68 @@
             border: 2px solid;
             padding: 55px;
             margin: 10px;
-            /* position: absolute;*/
+            
         }
         #contPrincipal div{
             border: 0.5px solid;
             padding: 20px;
-            opacity: 0.8;
+            position: absolute;
+
         }
         /* ponemos cada caja de un color */
         #caja1{
             background-color: rgb(120, 120, 199);
-            float: left;
+            top: 15px;
+            left: 15px;
         }
         #caja2{
             background-color: rgb(199, 120, 120);
-            float: left;
-            z-index: 20;
+            top: 30px;
+            left: 30px;
         }
         #caja3{
             background-color: rgb(120, 199, 133);
-            float: left;
+            top: 45px;
+            left: 45px;
         }
         #caja4{
             background-color: rgb(155, 155, 163);
-            float: left;
+            top: 65px;
+            left: 65px;
         }
     </style>
-    <script>
-        window.onload = function(){ // es una funcion anonima, solo se procesa una vez.
 
-        };
+    <script>
+
+        let z = 1; // defino una variable para utilizarla de contador
+        function traerAlfrente(evento){
+            let cajaActual = evento.currentTarget;
+            cajaActual.style.zIndex = z++;
+        }
+
+        window.onload = function() { // es una funcion anonima, solo se procesa una vez.
+            var cajas = document.getElementsByClassName('cajas'); // se hace con todos los elementos en un array
+            for (let i = 0; i<cajas.length; i++){
+                cajas[i].onclick = traerAlfrente;
+            }
+        }
     </script>
+
 </head>
+
 <body>
     <div id="contPrincipal"> <!-- lo mismo que si escribimos esto div#contPrincipal>div#caja$*4>p>{Caja$} y damos intro-->
-        <div id="caja1">
-            <p>Caja 1 - Por un puñado de dolares</p>
+        <div id="caja1" class = "cajas">
+            <p>Caja 1 - Por un puñado de dolares...</p>
         </div>
-        <div id="caja2">
-            <p>Caja 2 - Unos pocos dolares</p>
+        <div id="caja2" class = "cajas">
+            <p>Caja 2 - Unos pocos dolares.....................</p>
         </div>
-        <div id="caja3">
-            <p>Caja 3 - Demasiados dolares para mi</p>
+        <div id="caja3" class = "cajas">
+            <p>Caja 3 - Demasiados dolares para mi.....................</p>
         </div>
-        <div id="caja4">
-            <p>Caja 4 - No quiero mas dolares</p>
+        <div id="caja4" class = "cajas">
+            <p>Caja 4 - No quiero mas dolares......................................</p>
         </div>
     </div>
     

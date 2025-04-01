@@ -6,51 +6,74 @@
     <title>09calculadora</title>
     <style>
         #contPrincipal{
-            background-color: blue;
+            background-color: rgb(1, 11, 18);
             color: white;
-            border: 2px solid;
+            border: 5px;
             padding: 55px;
-            margin: 10px;
+            margin: 5px;
+            font-size: 20px;
             
         }
         h1{
-            color: rgb(42, 165, 52);
+            color: rgb(205, 105, 11);
+        }
+        p{
+            color: rgb(199, 21, 137); 
+            font-size: 50px;
         }
     </style>
 
     <script>
-        function calcularOperacion() {
-        
+        function inicio(){
+            document.getElementById('btnCalcular').onclick = click_botonCalcular; //llama al elemento 
         }
-
-        // hay que poner la funcion windows yhacer como el 08
         
+        function click_botonCalcular(){
+            let v1 = Number(document.getElementById('v1').value);
+            let v2 = Number(document.getElementById('v2').value);
+            let operador = document.getElementById('operador').value;
+            console.log(v1);
+            console.log(operador);
+            console.log(v2);
+            switch(operador){
+                case '+':resultado = v1+v2;
+                    break;
+                case '-':resultado = v1-v2;
+                    break;
+                case '*':resultado = v1*v2;
+                    break;
+                case '/':resultado = v1/v2;
+                    break;
+            }
+            console.log(resultado);
+            document.getElementById('resultado').textContent = resultado;
+        }
+        
+        window.onload = inicio; 
     </script>
 </head>
 
 <body>
     <div id = "contPrincipal">
         <h1>Super Calculadora</h1>
-        <form>
-            <label for="v1">Valor 1</label>
-            <input id = "v1" type="number" name = "v1">
+            <label for="v1">Valor 1: </label>
+            <input id = "v1" type="number" name = "v1" class = "numeros">
 
-            <label for = "operador">Operador</label>
-            <select id = "Operador:" name = "operador">
+            <label for = "operador">Operador:</label>
+            <select id = "operador" name = "operador">
                 <option value= "+" >Suma</option>
                 <option value= "-" >Resta</option>
                 <option value= "*" >Producto</option>
                 <option value= "/" >División</option>
-
-            <label for="v2">Valor 1</label>
-            <input id = "v2" type="number" name = "v2">   
-
-            <button id = "btnCalcular">Calcular</button>
-
             </select>
-        </form>
-        
-        <p id = "resultado" resultado.evento.onClick = calcularOperacion</p>
+
+            <label for = "v2">Valor 2: </label>
+            <input id = "v2" type="number" name = "v2" class = "numeros">   
+
+            <button id = "btnCalcular"> Calcular </button>
+
+            
+        <p id = "resultado"> Resultado de la operación </p>
     </div>
     
 </body>

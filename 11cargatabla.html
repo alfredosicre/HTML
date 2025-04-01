@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cargatabla</title>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        text-align: center;
+    }
+    #divIngreso{
+        text-align:center;
+    }
+    #tblColegas{
+        width: 400px;
+        margin: auto;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+    #tblcolegas td, #tblColegas th{
+        border: 1px solid;
+        padding: 5px;
+    }
+</style>
+
 </head>
 <body>
-    
+    <h1>Carga de datos</h1>
+    <div id="divIngreso">
+        <label>Nombre:</label>
+        <input type="text" id="nombre">
+        <label>Apellidos:</label>
+        <input type="text" id="apellidos">
+
+        <button id="btnIns">Insertar</button>
+    </div>
+    <table id="tblColegas">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan</td>
+                <td>Jimenez</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

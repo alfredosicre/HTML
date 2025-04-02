@@ -1,0 +1,17 @@
+/* 03estilosexternos.css - Programa de ejemplo */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;/* usa arial, sino hay usa helvetica y sino hay pon la que tengas sin serif */
+}
+/*selector de etiqueta, en este caso te selecciona los dos h5 */
+h5{
+    color: brown;
+}
+/* selector de id del programa 03estilosexternos.html*/
+#ID_del_primer_h2{
+     
+    background-color: black;
+    color: rgb(0, 255, 51);
+    padding: 30px 250px; /* margenes internos */
+    margin: 30px auto;
+}

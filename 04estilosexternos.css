@@ -1,0 +1,16 @@
+/* 04estilosexternos.css - Programa de ejemplo */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;/* usa arial, sino hay usa helvetica y sino hay pon la que tengas sin serif */
+}
+/* selector de id del programa 05linksimportantes.html*/
+#contPrincipal{
+    font-size: 20px;
+    background-color: grey;
+    color: rgb(0, 255, 51);
+    padding: 30px 250px; /* margenes internos */
+    margin: 30px auto;
+    border: 10Px solid black;
+    border-radius: 15px;
+    box-shadow: 20px 20px 30px grey;
+}

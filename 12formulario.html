@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ 
+            font-family: Arial, Helvetica, sans-serif;
+            text-align:center;
+            padding: 10px 10px; /* margenes internos */
+            margin: 5px auto;
+            background-color: rgb(233, 232, 239);
+            /*border: 2px solid;*/
+        }
+        #contPrincipal{
+            background-color: rgb(101, 104, 101); 
+        }
+        #olvido{
+            margin: 10px;
+        }
+        #titulo{
+            font-size: 50px; 
+            background-color: rgb(95, 77, 234); 
+        }
+        input, label, button{
+            display: block;
+            margin: 0.1px center;
+
+        }
+    </style>
+
+    <script>
+    //  window.onload = function(){ // es una funcion anonima, solo se procesa una vez.
+    //     document.getElementById('contPrincipal').onclick = proceso;
+    //   }
+    //function proceso(){
+    //    console.log("Hola, has hecho click");
+    //}
+    </script>
+</head>
+<body>
+    <div class id = "titulo">ENTRADA A LA APLICACIÓN</div>
+
+    <div class id = "contPrincipal">
+        
+        <form action = "HTTP://10.1.2.10:8080/mi_app/login" method = "post">
+
+            <label for="usr">Usuario</label>
+            <input type="text" name="usuario" required placeholder="Ingresa tu usuario">
+
+            <label for="pas">Password</label>
+            <input type="password" name="password" placeholder="Password">
+
+            <button type="submit"> Enviar</button>
+            
+        </form>
+
+        <a id = "olvido" href = "HTTP://10.1.2.10:8080/mi_app/password">Pulsa aquí si has olvidado la contraseña</a>
+    </div>
+</body>
+</html>

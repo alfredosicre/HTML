@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    img{
+        width: 100px;
+    }
+    .destino{
+        background-color: lightgray;
+        width: 150px;
+        height: 400px;
+        padding: 10;
+        float: left;
+        margin: 15px;
+        text-align: center;
+    }
+    .movil{
+        margin: 20px auto;
+        border: 2px solid;
+        padding: 5px;
+
+    }
+</style>
+
+<script>
+    function iniciar(ev){ // ev es el nombre de una variable
+        // console.log(ev.currentTarget.id); // me muestra el id del elemento que se esta moviendo
+        ev.dataTransfer.setData('movilId', ev.currentTarget.id);  // almacena todos los valores que recupera
+
+    }
+    function arrastrar(ev){
+        ev.preventDefault(); // no te comportes con tu comportamiento por defecto
+
+    }
+    function soltar(ev){
+        let movil = document.getElementById(ev.dataTransfer.getData('movilId'));
+        let destino = ev.currentTarget; // comprueba donde esta el movil en ese momento
+        destino.appendChild(movil); // situa el movil en el lugar elegido
+
+    }
+
+    window.onload = function(){
+        // let moviles = document.getElementsByClassName('movil'); los dos funcionan igual
+        let moviles = document.querySelectorAll('.movil'); // moviles ahora es un array con los 3 movil
+        for (let i = 0; i < moviles.length; i++){
+            moviles[i].ondragstart = iniciar; // recuperamos cuando empezamos a mover una de las tres imagenes
+        }
+        // seleccionamos el evento que se esta moviendo
+        let destinos = document.querySelectorAll('.destino');
+        for (let i = 0; i < destinos.length; i++){
+            //destinos[i].ondragover = arrastrar; // recuperamos cuando arrastramos una de las tres imagenes
+            destinos[i].addEventListener('dragover', arrastrar); // lo mismo pero mas correcto
+            destinos[i].addEventListener('drop', soltar); // me coge el lugar donde suelto el raton
+        }
+    }
+</script>
+
+</head>
+<body>
+    <!--div.destino*3>div#movil$.movil*3>img-->
+    <div class="destino">
+        <div id="movil1" class="movil"><img src="css.jpeg" alt=""></div>
+        <div id="movil2" class="movil"><img src="HTML-5.jpeg" alt=""></div>
+        <div id="movil3" class="movil"><img src="w3c.jpeg" alt=""></div>
+    </div>
+    <div class="destino"></div>
+    <div class="destino"></div>
+
+</body>
+</html>

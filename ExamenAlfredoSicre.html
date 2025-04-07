@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <script>
+
+        function calcular(){
+            // ver numero par o impar
+            let par = valor % 2
+            if (par == 0){
+                    console.log(`Es par + ${valor},`);
+            }else{
+                    console.log(`Es impar + ${valor},`); 
+            }
+            // ver si es positivo o negativo
+            console.log()
+            if (valor >=0) {
+                console.log(`Es positivo + ${valor},`);
+            }else{
+                console.log(`Es negativo + ${valor},`);
+            }
+            // multiplo de 3
+            let mulTres = valor % 3
+            if (mulTres == 0) {
+                    console.log(`Es multiplo de 3 + ${valor},`);
+            }else{
+                    console.log(`No es multiplo de 3 + ${valor},`); 
+            }
+            // numero de digitos
+            let resto = 0;
+            let contador = 0;
+            for (let i = 1; valor != 0; i++){
+                resto = valor % 10;
+                console.log(`Número: ${resto}`);
+                valor = Math.floor(valor / 10);
+                contador = contador + 1;
+            }
+            console.log(`Tiene ${contador} digitos`);
+
+        }
+
+        window.onload = function(){
+            document.getElementById('contPrincipal').onclick = calcular;
+        }
+    </script>
+
+</head>
+<body>
+    <div id="contPrincipal">
+        <label for="ingValor">Ingresa un valor entero:</label>
+        <input type="number" valor="ingValor" required placeholder="Ingresa un numero entero">
+
+        <button>Clasificar</button>
+    </div>
+</body>
+</html>

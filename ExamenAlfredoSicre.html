@@ -9,32 +9,33 @@
 
         function calcular(){
             // ver numero par o impar
+            let valor = Number(document.getElementById('valor01').value);
             let par = valor % 2
             if (par == 0){
-                    console.log(`Es par + ${valor},`);
+                    console.log(`Es par  ${valor}`);
             }else{
-                    console.log(`Es impar + ${valor},`); 
+                    console.log(`Es impar  ${valor}`); 
             }
             // ver si es positivo o negativo
             console.log()
             if (valor >=0) {
-                console.log(`Es positivo + ${valor},`);
+                console.log(`Es positivo  - ${valor}`);
             }else{
-                console.log(`Es negativo + ${valor},`);
+                console.log(`Es negativo  - ${valor}`);
             }
             // multiplo de 3
             let mulTres = valor % 3
             if (mulTres == 0) {
-                    console.log(`Es multiplo de 3 + ${valor},`);
+                    console.log(`Es multiplo de 3 - ${valor}`);
             }else{
-                    console.log(`No es multiplo de 3 + ${valor},`); 
+                    console.log(`No es multiplo de 3 - ${valor}`); 
             }
             // numero de digitos
             let resto = 0;
             let contador = 0;
             for (let i = 1; valor != 0; i++){
                 resto = valor % 10;
-                console.log(`Número: ${resto}`);
+                // console.log(`Número: ${resto}`);
                 valor = Math.floor(valor / 10);
                 contador = contador + 1;
             }
@@ -43,7 +44,7 @@
         }
 
         window.onload = function(){
-            document.getElementById('contPrincipal').onclick = calcular;
+            document.getElementById('boton').onclick = calcular;
         }
     </script>
 
@@ -51,9 +52,9 @@
 <body>
     <div id="contPrincipal">
         <label for="ingValor">Ingresa un valor entero:</label>
-        <input type="number" valor="ingValor" required placeholder="Ingresa un numero entero">
+        <input id = valor01 type="number" valor="ingValor" required placeholder="Ingresa un numero entero">
 
-        <button>Clasificar</button>
+        <button id = "boton">Clasificar</button>
     </div>
 </body>
 </html>

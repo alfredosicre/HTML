@@ -51,7 +51,7 @@
         }
 
         window.onload = function() { // es una funcion anonima, solo se procesa una vez.
-            var cajas = document.getElementsByClassName('cajas'); // se hace con todos los elementos en un array
+            let cajas = document.getElementsByClassName('cajas'); // se hace con todos los elementos en un array
             for (let i = 0; i<cajas.length; i++){
                 cajas[i].onclick = traerAlfrente;
             }

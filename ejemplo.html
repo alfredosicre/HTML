@@ -12,13 +12,13 @@
             background-color: #f0f0f0;
         }
         header {
-            background-color: #333;
+            background-color: #0b0beb;
             color: white;
             padding: 15px;
             text-align: center;
         }
         nav {
-            background-color: #444;
+            background-color: #258ad6;
             color: white;
             padding: 10px;
             display: flex;
@@ -30,7 +30,7 @@
             padding: 5px 10px;
         }
         nav a:hover {
-            background-color: #666;
+            background-color: #e80707;
         }
         main {
             padding: 20px;
@@ -43,7 +43,7 @@
             margin-bottom: 20px;
         }
         footer {
-            background-color: #333;
+            background-color: #e70f0f;
             color: white;
             text-align: center;
             padding: 10px;
@@ -71,40 +71,76 @@
             margin-bottom: 10px;
             padding: 8px;
         }
+        #inicio h2{
+            background-color: rgb(79, 239, 10);
+            text-align: center;
+        }
+        #inicio p{
+            text-align: center;
+            text-decoration-line: underline;
+        }
+        #servicios h2{ /* del id servicios cojo la linea h2 */
+            background-color: rgb(239, 10, 216);
+            text-align: center;
+        }
+        #servicios ul{
+            background-color: rgb(233, 179, 229);
+        }
+        #servicios h3{
+            background-color: rgb(239, 136, 10);
+            text-align: center;
+        }
+        #servicios table{
+            background-color: rgb(242, 204, 158);
+            text-align: center;
+        }
+        #servicios table thead th{
+            background-color: rgb(119, 69, 8);
+            text-align: center;
+        }
+        #servicios table tbody td{
+            text-align: center;
+        }
+        #servicios table tbody tr:nth-child(odd) td{
+            background-color: rgb(149, 123, 90);
+            text-align: left;
+
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Mi Página Completa de Ejemplo</h1>
+    <h1>VIAJES PARA DISFRUTAR</h1>
 </header>
 
 <nav>
     <a href="#inicio">Inicio</a>
-    <a href="#acerca">Acerca</a>
+    <a href="#acerca">Acerca de</a>
     <a href="#servicios">Servicios</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <main>
     <section id="inicio">
-        <h2>Bienvenidos</h2>
-        <p>Esta es una página de ejemplo completa para tus pruebas. Incluye secciones, imágenes, tablas y un formulario.</p>
-        <img src="https://picsum.photos/1200/400" alt="Imagen de ejemplo">
+        <h2>¡¡ Bienvenidos !!</h2>
+        <p>¿Estas preparad@ para hacer el viaje de tu vida?</p>
+        <img src="https://media.istockphoto.com/id/1157135028/es/foto/residencia-en-zhouzhuang-ancient-town-suzhou.jpg?s=612x612&w=0&k=20&c=6X9-r3EfDBwHPmUcoees1feDEwSf8fW8XjEsX9WwVGg=" alt="Imagen de ejemplo">
+        <!--<img src="https://picsum.photos/1200/400" alt="Imagen de ejemplo">-->
     </section>
 
     <section id="acerca">
         <h2>Acerca de Nosotros</h2>
-        <p>Somos una empresa ficticia dedicada a ofrecer soluciones de ejemplo para desarrolladores web y entusiastas de Docker.</p>
+        <p>Somos una empresa dedicada a ofrecer soluciones a tus sueños de viaje.</p>
     </section>
 
     <section id="servicios">
         <h2>Nuestros Servicios</h2>
         <ul>
-            <li>Desarrollo Web</li>
-            <li>Consultoría en Docker</li>
-            <li>Implementación de Servidores Tomcat</li>
-            <li>Capacitación en Tecnologías Web</li>
+            <li>Viajes personalizados</li>
+            <li>Viajes en grupo</li>
+            <li>Especialistas en viajes para solitarios</li>
+            <li>Especialistas en Asia</li>
         </ul>
 
         <h3>Precios</h3>
@@ -118,19 +154,19 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Desarrollo Web</td>
-                    <td>Páginas web personalizadas</td>
-                    <td>$1,000</td>
+                    <td>Viajes 01</td>
+                    <td>Personalizados</td>
+                    <td>Consultar</td>
                 </tr>
                 <tr>
-                    <td>Consultoría Docker</td>
-                    <td>Configuración de contenedores</td>
-                    <td>$500</td>
+                    <td>Viajes 02</td>
+                    <td>En grupo</td>
+                    <td>Consultar</td>
                 </tr>
                 <tr>
-                    <td>Capacitación</td>
-                    <td>Cursos online y presenciales</td>
-                    <td>$300</td>
+                    <td>Viajes 03</td>
+                    <td>Asia</td>
+                    <td>Consultar</td>
                 </tr>
             </tbody>
         </table>
@@ -149,7 +185,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Mi Página Completa de Ejemplo - Todos los derechos reservados.</p>
+    <p>&copy; 2025 - Todos los derechos reservados.</p>
 </footer>
 
 </body>
